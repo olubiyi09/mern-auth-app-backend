@@ -16,7 +16,7 @@ app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(
     cors({
-        origin: ["http://localhost:3000", "https://my-auth-app.onrender.com"],
+        origin: ["http://localhost:3000", "https://my-new-auth-app.vercel.app"],
         credentials: true
     })
 )
