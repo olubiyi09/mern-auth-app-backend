@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const expressHandlebars = require('express-handlebars');
+const hbs = require("nodemailer-express-handlebars");
 const path = require("path")
 
 const sendEmail = async (subject, send_to, sent_from, reply_to, template, name, link) => {
@@ -39,7 +39,7 @@ const sendEmail = async (subject, send_to, sent_from, reply_to, template, name, 
         extName: ".handlebars",
     }
 
-    transporter.use("compile", expressHandlebars(handlebarOptions))
+    transporter.use("compile", hbs(handlebarOptions))
 
     // Send Email
     transporter.sendMail(options, function (err, info) {
