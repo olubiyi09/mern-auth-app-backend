@@ -47,6 +47,7 @@ const sendEmail = async (subject, send_to, sent_from, reply_to, template, name, 
             console.log(err);
         } else {
             console.log(info);
+            // console.log(info);
         }
     });
 };
